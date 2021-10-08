@@ -1,0 +1,41 @@
+version: "3"
+services:
+  nginx:
+    image: nginx:latest
+    stdin_open: true
+    tty: true
+    ports:
+      - 80:80
+    volumes:
+      - 'nfsmount:/var/doodle'
+      - ./.docker/vhost.conf:/etc/nginx/conf.d/default.conf:delegated
+    depends_on:
+      - php
+
+  php:
+    build: '.docker/'
+    volumes:
+      - 'nfsmount:/var/doodle'
+
+  mariadb:
+    image: mariadb
+    ports:
+      - 3306:3306
+    command: [
+        '--character-set-server=utf8mb4',
+        '--collation-server=utf8mb4_unicode_ci'
+    ]
+    volumes:
+      - ../mysql-data/database:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: doodle
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: trOgyy&gd34Kf
+
+volumes:
+  nfsmount:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
+      device: ":${PWD}"

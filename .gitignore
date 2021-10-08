@@ -1,0 +1,68 @@
+# Logs and databases #
+######################
+*.log
+*.logs
+*.sql
+*.sqlite
+server-logs
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE #
+#######
+.classpath
+.project
+.settings
+.idea
+.metadata
+*.iml
+*.ipr
+
+# Other #
+#########
+.sass-cache
+.phplint-cache
+/node_modules
+/bower_components
+package.lock
+package-lock.json
+
+# Project #
+###########
+/www/core/config/config.environment.inc.php
+
+# Cache #
+#########
+/www/core/cache
+/www/assets/components/modxminify/cache
+/www/assets/components/minifyx/cache
+/www/assets/image-cache
+/www/assets/cache_image
+/www/assets/min/cache
+/www/assets/components/imagestyles/cache
+/www/assets/components/phpthumbof/cache
+/www/assets/components/discuss/attachments
+/www/assets/components/formit/attachments
+
+# Files handled with Composer #
+###############################
+/www/composer.lock
+/www/vendor
+/www/core/vendor
+
+# Assets #
+##########
+/www/assets/css/**/*.min.css
+/www/assets/js/**/*.min.js
+
+# Packages #
+###############################
+/www/core/packages
