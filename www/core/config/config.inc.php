@@ -29,27 +29,27 @@ $https_port = '443';
 $uuid = 'ef73b07a-69d4-4ff9-9582-3fe5929cfdd7';
 
 if (!defined('MODX_CORE_PATH')) {
-    $modx_core_path= '/var/doodle/www/core/';
+    $modx_core_path= dirname(dirname(__DIR__)) . '/core/';
     define('MODX_CORE_PATH', $modx_core_path);
 }
 if (!defined('MODX_PROCESSORS_PATH')) {
-    $modx_processors_path= '/var/doodle/www/core/model/modx/processors/';
+    $modx_processors_path= dirname(dirname(__DIR__)) . '/core/model/modx/processors/';
     define('MODX_PROCESSORS_PATH', $modx_processors_path);
 }
 if (!defined('MODX_CONNECTORS_PATH')) {
-    $modx_connectors_path= '/var/doodle/www/connectors/';
+    $modx_connectors_path= dirname(dirname(__DIR__)) . '/connectors/';
     $modx_connectors_url= '/connectors/';
     define('MODX_CONNECTORS_PATH', $modx_connectors_path);
     define('MODX_CONNECTORS_URL', $modx_connectors_url);
 }
 if (!defined('MODX_MANAGER_PATH')) {
-    $modx_manager_path= '/var/doodle/www/manager/';
+    $modx_manager_path= dirname(dirname(__DIR__)) . '/manager/';
     $modx_manager_url= '/manager/';
     define('MODX_MANAGER_PATH', $modx_manager_path);
     define('MODX_MANAGER_URL', $modx_manager_url);
 }
 if (!defined('MODX_BASE_PATH')) {
-    $modx_base_path= '/var/doodle/www/';
+    $modx_base_path= dirname(dirname(__DIR__)) . '/';
     $modx_base_url= '/';
     define('MODX_BASE_PATH', $modx_base_path);
     define('MODX_BASE_URL', $modx_base_url);
@@ -81,7 +81,7 @@ if (!defined('MODX_SITE_URL')) {
     define('MODX_SITE_URL', $site_url);
 }
 if (!defined('MODX_ASSETS_PATH')) {
-    $modx_assets_path= '/var/doodle/www/assets/';
+    $modx_assets_path= dirname(dirname(__DIR__)) . '/assets/';
     $modx_assets_url= '/assets/';
     define('MODX_ASSETS_PATH', $modx_assets_path);
     define('MODX_ASSETS_URL', $modx_assets_url);
