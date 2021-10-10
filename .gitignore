@@ -54,8 +54,11 @@ package-lock.json
 
 # Files handled with Composer #
 ###############################
+/composer.lock
+/vendor
 /www/composer.lock
 /www/vendor
+/www/core/composer.lock
 /www/core/vendor
 
 # Assets #
