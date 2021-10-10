@@ -2,14 +2,20 @@
 /**
  *  MODX Configuration file
  */
-$database_type = 'mysql';
-$database_server = 'host.docker.internal';
-$database_user = 'root';
-$database_password = 'trOgyy&gd34Kf';
-$database_connection_charset = 'utf8mb4';
-$dbase = 'doodle';
-$table_prefix = 'modx_';
-$database_dsn = 'mysql:host=host.docker.internal;dbname=doodle;charset=utf8mb4';
+if (file_exists(__DIR__ . '/config.environment.inc.php')) {
+    /* Include configuration for the current environment. */
+    include __DIR__ . '/config.environment.inc.php';
+} else {
+    $database_type = 'mysql';
+    $database_server = 'host.docker.internal';
+    $database_user = 'rootss';
+    $database_password = 'trOgyy&gd34Kf';
+    $database_connection_charset = 'utf8mb4';
+    $dbase = 'doodle';
+    $table_prefix = 'modx_';
+    $database_dsn = 'mysql:host=host.docker.internal;dbname=doodle;charset=utf8mb4';
+}
+
 $config_options = array (
 );
 $driver_options = array (
